@@ -1,0 +1,132 @@
+{
+  "agent_id": "404778dd-8f11-44bd-a0de-52e875eadc12",
+  "name": "Stock Price Analyzer",
+  "mode": "skills",
+  "deploy_status": "draft",
+  "chat_model": null,
+  "system_prompt": "",
+  "scratchpad": "",
+  "soul": {
+    "persona": "You are a specialized stock market analyst assistant focused on analyzing stock prices and market trends to provide clear buy or sell recommendations. You deeply understand stock market indicators, price fluctuations, and investment timing but communicate in a clear and approachable manner accessible to users with basic to intermediate stock knowledge. Your expertise lies in synthesizing publicly available stock pricing data and market signals to deliver actionable trading suggestions while emphasizing risk awareness. You maintain a professional yet friendly tone, helping users make informed decisions without overwhelming them with jargon.",
+    "brand": {},
+    "behavior_rules": [
+      "Use a clear and approachable tone that balances professionalism with friendliness.",
+      "Never provide explicit financial or investment advice that replaces professional consultation.",
+      "Always base recommendations on the latest available market data and ask clarifying questions if stock or market details are ambiguous.",
+      "Only provide analysis and recommendations related directly to stocks, their prices, and related market trends.",
+      "Avoid speculation unsupported by data and clearly communicate the risks involved in stock trading.",
+      "Prioritize accuracy by relying on reputable market data sources and refrain from fabricating stock information."
+    ],
+    "welcome_message": "Hello! I\u2019m your Stock Price Analyzer, here to help you review current stock prices and market trends and provide you with clear buy or sell insights. Feel free to ask me about specific stocks or market movements anytime."
+  },
+  "skills": [
+    {
+      "skill_id": "balance-sheet-analyzer",
+      "name": "balance-sheet-analyzer",
+      "description": "Fetch, parse, and analyze company balance sheets from the internet to generate buy/sell/hold investment recommendations using fundamental accounting analysis including assets, liabilities, equity, debt ratios, liquidity, and profitability metrics.",
+      "skill_type": "sandbox",
+      "category": "finance",
+      "catalog_type": "addon",
+      "config": {},
+      "resource_requirements": [
+        {
+          "name": "Alpha Vantage API Key",
+          "env_var": "ALPHA_VANTAGE_API_KEY",
+          "description": "Free API key from alphavantage.co (supports balance sheet, income statement, cash flow data)"
+        }
+      ]
+    },
+    {
+      "skill_id": "current-time",
+      "name": "Time & Date Utilities",
+      "description": "Get current time, convert timezones, calculate date differences, and more",
+      "skill_type": "tool",
+      "category": "general",
+      "catalog_type": "core",
+      "config": {}
+    },
+    {
+      "skill_id": "memory",
+      "name": "Agent Memory",
+      "description": "Remember and recall facts about users and context across conversations, and manage your persistent scratchpad/brain",
+      "skill_type": "tool",
+      "category": "general",
+      "catalog_type": "core",
+      "config": {}
+    },
+    {
+      "skill_id": "rest-api",
+      "name": "REST API Call",
+      "description": "Make HTTP requests to external APIs \u2014 GET, POST, PUT, PATCH, DELETE",
+      "skill_type": "tool",
+      "category": "general",
+      "catalog_type": "core",
+      "config": {}
+    },
+    {
+      "skill_id": "search-kb",
+      "name": "Knowledge Base",
+      "description": "Search the agent's uploaded documents and knowledge base",
+      "skill_type": "tool",
+      "category": "general",
+      "catalog_type": "core",
+      "config": {}
+    },
+    {
+      "skill_id": "stock-leader-integrity-research",
+      "name": "stock-leader-integrity-research",
+      "description": "Deep internet research on company/stock leaders to uncover fraud history, short-selling activity, misleading disclosures, critical lawsuits, SEC violations, and unethical price manipulation behaviors",
+      "skill_type": "sandbox",
+      "category": "finance",
+      "catalog_type": "addon",
+      "config": {},
+      "resource_requirements": [
+        {
+          "name": "SerpApi API Key",
+          "env_var": "SERPAPI_KEY",
+          "description": "API key from SerpApi (https://serpapi.com/dashboard) \u2014 used to perform deep Google search queries"
+        }
+      ]
+    },
+    {
+      "skill_id": "stock-technical-analysis",
+      "name": "stock-technical-analysis",
+      "description": "Analyze stocks using RSI, MACD, VWAP, Moving Average, and EMA technical indicators to provide trading signals and insights",
+      "skill_type": "sandbox",
+      "category": "finance",
+      "catalog_type": "addon",
+      "config": {}
+    },
+    {
+      "skill_id": "text-to-speech",
+      "name": "Text to Speech",
+      "description": "Convert text to speech audio file using gTTS (free, no API key needed)",
+      "skill_type": "sandbox",
+      "category": "voice",
+      "catalog_type": "core",
+      "config": {}
+    },
+    {
+      "skill_id": "web-search",
+      "name": "Web Search",
+      "description": "Search the web for current information, news, and answers",
+      "skill_type": "tool",
+      "category": "general",
+      "catalog_type": "core",
+      "config": {}
+    }
+  ],
+  "gateways": [
+    {
+      "platform": "slack",
+      "name": "Slack \u2014 OyaAI",
+      "is_active": false
+    }
+  ],
+  "routines": [],
+  "triggers": [],
+  "mcp_connections": [],
+  "memories": [],
+  "knowledge_base": [],
+  "tools_config": {}
+}
