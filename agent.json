@@ -116,13 +116,7 @@
       "config": {}
     }
   ],
-  "gateways": [
-    {
-      "platform": "slack",
-      "name": "Slack \u2014 OyaAI",
-      "is_active": false
-    }
-  ],
+  "gateways": [],
   "routines": [],
   "triggers": [],
   "mcp_connections": [],
