@@ -132,6 +132,15 @@
       "prompt": "Testing",
       "output_channel": "C0AP4C0LTN3",
       "is_active": true
+    },
+    {
+      "name": "send test message",
+      "description": "",
+      "schedule_human": "Every 1 minute",
+      "schedule_cron": "*/1 * * * *",
+      "prompt": "send test message",
+      "output_channel": "C0AP4C0LTN3",
+      "is_active": true
     }
   ],
   "triggers": [],
