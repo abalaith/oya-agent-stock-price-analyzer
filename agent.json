@@ -120,16 +120,16 @@
     {
       "platform": "slack",
       "name": "Slack \u2014 OyaAI",
-      "is_active": true
+      "is_active": false
     }
   ],
   "routines": [
     {
-      "name": "test",
+      "name": "Testing",
       "description": "",
-      "schedule_human": "Every 1 minute",
-      "schedule_cron": "*/1 * * * *",
-      "prompt": "test",
+      "schedule_human": "Daily at 12:00 PM",
+      "schedule_cron": "0 12 * * *",
+      "prompt": "Testing",
       "output_channel": "C0AP4C0LTN3",
       "is_active": true
     },
@@ -139,15 +139,6 @@
       "schedule_human": "Tue at 9:00 AM",
       "schedule_cron": "0 9 * * 2",
       "prompt": "send test message",
-      "output_channel": "C0AP4C0LTN3",
-      "is_active": true
-    },
-    {
-      "name": "Testing",
-      "description": "",
-      "schedule_human": "Daily at 12:00 PM",
-      "schedule_cron": "0 12 * * *",
-      "prompt": "Testing",
       "output_channel": "C0AP4C0LTN3",
       "is_active": true
     }
